@@ -1,9 +1,11 @@
 const mongoose = require('mongoose');
-const mongoURL = 'mongodb://localhost:27017/hotellss' // replayced my dtabase with your dtabase name
-
+require('dotenv').config();
+ // const mongoURL='mongodb+srv://siddarthtakale0:siddarthtakale01@cluster0.wes8vut.mongodb.net/'
+const mongoURL = process.env.MONGODB_URL;
+mongoose.connect(mongoURL);
 
 // setup mongodb connection
-mongoose.connect(mongoURL);
+//mongoose.connect(mongoURL);
    
 
 //get the default connection
